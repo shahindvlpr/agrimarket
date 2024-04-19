@@ -952,7 +952,7 @@ body.landing #header {
 /* Banner */
 
 #banner {
-	background-image:  url('../images/agri.png') !important;
+	background-image:  url('../images/banner_pic.png') !important;
 	background-position: center;
 	background-repeat: no-repeat;
 	background-size: cover;
@@ -1098,4 +1098,79 @@ img.logoimg {
 
 p.categoryp {
     margin-left: 70px;
+    margin-top: 10px;
+}
+
+.row.uniform.unique {
+    width: 50%;
+}
+
+/* banner overlay section */
+
+/* .banner-overlay {
+    position: relative;
+    z-index: -10;
+}
+.banner-overlay::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    background: #000;
+    opacity: 0.6;
+}
+
+.banner-container {
+    opacity: 1;
+    z-index: 100 !important;
+    position: relative;
+} */
+
+.row.uniform.\35 0\25>* {
+    padding: 1em 0 0 1em;
+    margin-left: 45px;
+}
+h3.login-item {
+    margin-left: 45px;
+}
+.row.uniform.login-content {
+    text-align: center;
+    margin-left: 115px;
+}
+
+.\37 u.\31 2u\$\(small\).login-submit {
+    padding-top: 0px;
+    padding-left: 0;
+}
+
+.row.uniform.sign-up {
+    margin-left: 10px;
+}
+.row.uniform.signup-add {
+    margin-left: 10px;
+}
+
+.\33 u.\31 2u\$\(small\).flexitem {
+    margin-top: 0;
+    padding-left: 0;
+	margin-left: -55px;
+}
+p.categoryp.signup {
+    padding-left: 125px;
+}
+h3.signup {
+    margin-left: 45px;
+}
+.\33 u.\31 2u\$\(small\).signup-btn {
+    padding-top: 0;
+}
+.\33 u.\31 2u\$\(small\).flexitem.login-cat {
+    margin-left: 20px;
+}
+
+#header nav > ul li a:hover {
+    transition: .6s all;
+    color: blue;
 }

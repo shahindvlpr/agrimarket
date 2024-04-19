@@ -21,6 +21,7 @@
 			<link rel="stylesheet" href="css/skel.css" />
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
+			<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"/>
 		</noscript>
 		<link rel="stylesheet" href="indexfooter.css" />
 
@@ -49,7 +50,8 @@
 	?>
 
 		<!-- Banner -->
-			<section id="banner" class="wrapper">
+			<section id="banner" class="wrapper banner-overlay">
+				<div class="banner-container">
 				<div class="container">
 				<h1>
 					<a style="color: #fff; font-size: 50px;" href="#" class="typewrite" data-period="2000" data-type='[ "Hello sir/ma&apos;am", "Welcome To Our E-Commerce Platform"]'>
@@ -60,7 +62,7 @@
 				<p>Your Product Our Market</p>
 				<br><br>
 				<center>
-					<div class="row uniform">
+					<div class="row uniform unique">
 						<div class="6u 12u$(xsmall)">
 							<button class="button fit" onclick="document.getElementById('id01').style.display='block'" style="width:auto">LOGIN</button>
 						</div>
@@ -70,7 +72,8 @@
 						</div>
 					</div>
 				</center>
-
+				</div>
+				</div>
 
 			</section>
 
@@ -157,7 +160,7 @@
 
   <div class="container">
 <section>
-  <h3>Login</h3>
+  <h3 class="login-item">Login</h3>
 			<form method="post" action="Login/login.php">
 				<div class="row uniform 50%">
 					<div class="7u$">
@@ -167,7 +170,7 @@
 						<input type="password" name="pass" id="pass" value="" placeholder="Password" style="width:80%" required/>
 					</div>
 				</div>
-					<div class="row uniform">
+					<!-- <div class="row uniform login-content">
 						<p>
 							<b>Category : </b>
 						</p>
@@ -179,10 +182,27 @@
 							<input type="radio" id="buyer" name="category" value="0">
 							<label for="buyer">Buyer</label>
 						</div>
+					</div> -->
+			<div class="row uniform login-content">
+				<p class="categoryp">
+					<b>Category</b>
+				</p>
+				<div class="3u 12u$(small) flexitem login-cat">
+				<div class="input-group">
+					<select class="custom-select" id="inputGroupSelect04" >
+						<option selected>choose</option>
+						<option  id="farmer" name="category" value="1">Farmer</option>
+						<option id="buyer" name="category" value="0">Buyer</option>
+					</select>
+					<!--<div class="input-group-append btn">
+						<button class="btn btn-outline-secondary" type="button">Button</button>
+					</div>-->
 					</div>
+				</div>
+			</div>
 					<center>
 						<div class="row uniform">
-							<div class="7u 12u$(small)">
+							<div class="7u 12u$(small) login-submit">
 								<input type="submit" value="Login" />
 							</div>
 						</div>
@@ -206,10 +226,10 @@
   <div class="container">
 
 <section>
-	<h3>SignUp</h3>
+	<h3 class="signup">SignUp</h3>
 	<form method="post" action="Login/signUp.php">
 		<center>
-		<div class="row uniform">
+		<div class="row uniform sign-up">
 			<div class="3u 12u$(xsmall)">
 				<input type="text" name="name" id="name" value="" placeholder="Name" required/>
 			</div>
@@ -217,7 +237,7 @@
 				<input type="text" name="uname" id="uname" value="" placeholder="UserName" required/>
 			</div>
 		</div>
-		<div class="row uniform">
+		<div class="row uniform sign-up">
 			<div class="3u 12u$(xsmall)">
 				<input type="text" name="mobile" id="mobile" value="" placeholder="Mobile Number" required/>
 			</div>
@@ -226,7 +246,7 @@
 				<input type="email" name="email" id="email" value="" placeholder="Email" required/>
 			</div>
 		</div>
-		<div class="row uniform">
+		<div class="row uniform sign-up">
 			<div class="3u 12u$(xsmall)">
 				<input type="password" name="password" id="password" value="" placeholder="Password" required/>
 			</div>
@@ -234,7 +254,7 @@
 				<input type="password" name="pass" id="pass" value="" placeholder="Retype Password" required/>
 			</div>
 		</div>
-		<div class="row uniform">
+		<div class="row uniform signup-add">
 			<div class="6u 12u$(xsmall)">
 				<input type="text" name="addr" id="addr" value="" placeholder="Address" style="width:80%" required/>
 			</div>
@@ -253,8 +273,8 @@
 			</div>
 		</div> -->
 
-		<div class="row uniform">
-			<p class="categoryp">
+		<div class="row uniform sign-up">
+			<p class="categoryp signup">
 				<b>Category</b>
 			</p>
 			<div class="3u 12u$(small) flexitem">
@@ -273,11 +293,11 @@
 
 
 
-			<div class="row uniform">
-				<div class="3u 12u$(small)">
+			<div class="row uniform sign-up">
+				<div class="3u 12u$(small) signup-btn">
 					<input type="submit" value="Submit" name="submit" class="special" />
 				</div>
-				<div class="3u 12u$(small)">
+				<div class="3u 12u$(small) signup-btn">
 					<input type="reset" value="Reset" name="reset"/>
 				</div>
 			</div>

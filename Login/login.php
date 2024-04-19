@@ -9,11 +9,11 @@
 
 if($category == 1)
 {
-    $sql = "SELECT * FROM farmer WHERE fusername='$user'";
+    $sql = "SELECT * FROM farmerregistration WHERE fusername='$user'";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
 
-    if($num_rows == 0)
+    if($num_rows == 1)
     {
         $_SESSION['message'] = "Invalid User Credentialss!";
         header("location: error.php");
@@ -64,7 +64,7 @@ if($category == 1)
 }
 else
 {
-    $sql = "SELECT * FROM buyer WHERE busername='$user'";
+    $sql = "SELECT * FROM buyerregistration WHERE busername='$user'";
     $result = mysqli_query($conn, $sql);
     $num_rows = mysqli_num_rows($result);
 

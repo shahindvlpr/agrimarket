@@ -37,9 +37,9 @@ if($length != 11)
 
 if($category == 1)
 {
-    $sql = "SELECT * FROM farmer WHERE femail='$email'";
+    $sql = "SELECT * FROM farmerregistration WHERE femail='$email'";
 
-    $result = mysqli_query($conn, "SELECT * FROM farmer WHERE femail='$email'") or die($mysqli->error());
+    $result = mysqli_query($conn, "SELECT * FROM farmerregistration WHERE femail='$email'") or die($mysqli->error());
 
     if ($result->num_rows > 0 )
     {
@@ -60,7 +60,7 @@ if($category == 1)
             $_SESSION['picStatus'] = 0;
             $_SESSION['picExt'] = "png";
 
-            $sql = "SELECT * FROM farmer WHERE fusername='$user'";
+            $sql = "SELECT * FROM farmerregistration WHERE fusername='$user'";
             $result = mysqli_query($conn, $sql);
             $User = $result->fetch_assoc();
             $_SESSION['id'] = $User['fid'];
@@ -109,7 +109,7 @@ else
 {
     $sql = "SELECT * FROM buyer WHERE bemail='$email'";
    
-    $result = mysqli_query($conn, "SELECT * FROM buyer WHERE bemail='$email'") or die($mysqli->error());
+    $result = mysqli_query($conn, "SELECT * FROM buyerregistration WHERE bemail='$email'") or die($mysqli->error());
 
     if ($result->num_rows > 0 )
     {
@@ -130,7 +130,7 @@ else
     	    $_SESSION['Active'] = 0;
             $_SESSION['logged_in'] = true;
 
-            $sql = "SELECT * FROM buyer WHERE busername='$user'";
+            $sql = "SELECT * FROM buyerregistration WHERE busername='$user'";
             $result = mysqli_query($conn, $sql);
             $User = $result->fetch_assoc();
             $_SESSION['id'] = $User['bid'];
