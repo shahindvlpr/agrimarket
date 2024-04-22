@@ -44,18 +44,18 @@
 					<h2>Welcome to Digital Market</h2>
 					<br /><br />
 					<div class="row 200%">
-						<section class="4u 12u$(small)">
+						<section class="4u 12u$(small) width_100%">
 							<a href="profileView.php"><img src="profileDefault.png"></a>
 							<p>Your Profile</p>
 						</section>
-						<section class="4u 12u$(small)">
+						<section class="4u 12u$(small) width_100%">
 							<a href="productMenu.php?n=1" name="catSearch"><img src="search.png"></a>
 							<p>Search according to your needs</p>
 						</section>
-						<section class="4u$ 12u$(small)">
+						<!-- <section class="4u$ 12u$(small)">
 							<a href="productmenu.php?n=0"><img src="product.png"></a>
 							<p>Our products</p>
-						</section>
+						</section> -->
 					</div>
 				</div>
 			</section>

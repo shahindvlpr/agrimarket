@@ -25,32 +25,225 @@
 		</noscript>
 		<link rel="stylesheet" href="indexfooter.css" />
 
-		<style>
-			.copyRight-area {
-				margin-top: 50px;
-				background: #000;
-				text-align: center;
-				color: #fff;
-				margin-bottom: 0;
-				padding-bottom: 0;
-			}
+<style
+	.copyRight-area {
+		margin-top: 50px;
+		background: #000;
+		text-align: center;
+		color: #fff;
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
 
-			.copyRight-area p {
-				margin-bottom: 0;
-				padding-bottom: 0;
-			}
-			footer#aboutUs {
-				padding-bottom: 20px;
-			}
-		</style>
+	.copyRight-area p {
+		margin-bottom: 0;
+		padding-bottom: 0;
+	}
+	footer#aboutUs {
+		padding-bottom: 20px;
+	}
+	
+</style>
+<style>
+section.product_section img {
+	width: 70px;
+}
+section.product_section {
+	background-image: url('images/banner_pic.png');
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	color: #ffffff;
+	text-align: center;
+}
+.white {
+	color: #fff !important;
+}
+.product_section:hover .row .col-md-4 {
+    background: gray;
+    opacity: .7;
+    border-radius: 10px;
+    padding: 20px;
+    border: none;
+    box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+	border-bottom: 5px solid #3BA666;
+    transition: 1s all;
+}
+section.background_img {
+    background-image: url(images/banner_pic.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -99;
+    position: relative;
+    border-top: 11px solid #000000;
+}
+.wrapper.style1{
+	background-image: url(images/banner_pic.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -99;
+    position: relative;
+    border-top: 11px solid #000000;
+}
+
+
+</style>
+<style>
+/* farmer section */
+
+.funders-section {
+    font-family: Poppins;
+    padding-top: 140px;
+    padding-bottom: 100px;
+	position: relative;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-right: -15px;
+    margin-left: -15px;
+}
+.funders-section .funders-section-title {
+    color: #fff;
+    font-size: 52px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 68px;
+    max-width: 590px;
+    margin-bottom: 20px;
+}
+.funders-section .funders-section-desc {
+    color: #fff;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 32px;
+    max-width: 590px;
+    margin-bottom: 28px;
+    font-family: verdana;
+}
+.learn-more-btn {
+    padding: 10px 20px;
+    justify-content: center;
+    align-items: center;
+    border-radius: 30px;
+    border: 1px solid #102ae7;
+    color: #ffffff;
+    font-family: Poppins;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    transition: transform 0.3s ease;
+}
+.funders-section .funders-section-img-right {
+    display: block;
+    max-height: 580px;
+    width: 100%;
+    padding-right: 20px;
+}
+.img-fluid {
+    max-width: 100%;
+    height: auto;
+}
+.funders-section::before {
+    position: absolute;
+    content: "";
+    /* background: #000; */
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    opacity: .7;
+    z-index: -1;
+    background-image: url(images/b5.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.funders-section-desc {
+    color: #fff;
+}
+
+.col-md-4>section {
+    border: 8px solid white;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+.col-md-4>section>strong h2 {
+    color: #fff !important;
+}
+
+.wrapper.style1{
+	background-image: url('images/banner_pic.png');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    z-index: -99;
+    position: relative;
+    border-top: 11px solid #000000;
+}
+section#main.change_bg {
+	background-image: url(images/b6.png);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+} 
+.wrapper .style1 .align-center .change_bg,
+.wrapper.style1 {
+	background-color: blue;
+	background-image: url('images/b6.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+</style>
 	</head>
 
 	<?php
 		require 'menu.php';
 	?>
+<!-- image-filtering-section-start -->
 
+<?php
+ 	// session_start();
+	if(!isset($_SESSION['logged_in']) OR $_SESSION['logged_in'] == 0)
+	{
+		$_SESSION['message'] = "You need to first login to access this page !!!";
+		header("Location: Login/error.php");
+	}
+
+ ?>
+<section class="product_section">
+<div class="container text-center">
+  <div class="row">
+    <div class="col-md-8">
+		<div class="welcome_text">
+			<h1 class="white">
+				<a style="color: #fff; font-size: 40px;" href="#" class="typewrite" data-period="2000" data-type='[ "Hello sir/ma&apos;am", "Welcome To Our E-Commerce Platform"]'>
+				<span class="wrap"></span>
+				</a>
+			</h1>
+			<h2 class="white">AgriMarket</h2>
+			<p>Your Product Our Market</p>
+		</div>
+	</div>
+    <div class="col-md-4">
+		<a href="productMenu.php?n=1" name="catSearch"><img src="images/search_product.png"></a>
+		<p class="p_text">Search according to your needs</p>
+	</div>
+  </div>
+</div>
+</section>
+
+<!-- image-filtering-section-end -->
 		<!-- Banner -->
-			<section id="banner" class="wrapper banner-overlay">
+			<!-- <section id="banner" class="wrapper banner-overlay">
 				<div class="banner-container">
 				<div class="container">
 				<h1>
@@ -75,10 +268,37 @@
 				</div>
 				</div>
 
-			</section>
+			</section> -->
+
+
+<!-- farmer-section -->
+
+<div class="funders-section">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-6 order-lg-first fund-first" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <div class="funders-section-title">
+          <p>Improving Access to Market for the Farmers</p>
+        </div>
+        <div class="funders-section-desc">
+          <p>We enable individuals and institutions to fund the capital requirement of the farmers. iFarmer bundles finance with agriculture inputs, advisory services, insurance and market access for the farmers. We use an agriculturally relevant and data-driven model to assess risk and return to develop funding schemes that fit the needs of smallholder farmers and the farm funders.</p>
+        </div>
+        <div>
+          <a href="#" class="learn-more-btn">
+            Learn More
+          </a>
+        </div>        
+      </div>
+      <div class="col-lg-6 order-first fund-second" style="translate: none; rotate: none; scale: none; transform: translate(0px, 0px); opacity: 1;">
+        <img alt="Farmers" class="img-fluid funders-section-img-right" src="images/farmer.avif">        
+      </div>
+    </div>
+  </div> 
+</div>
+
 
 		<!-- One -->
-			<section id="one" class="wrapper style1 align-center">
+			<section id="one" class="wrapper style1 align-center background_img">
 				<div class="container">
 					<header>
 						<h2>AgriMarket</h2>
@@ -309,7 +529,6 @@
   </div>
 
 
-
 <script>
 // typewriter area 
 var TxtType = function(el, toRotate, period) {
@@ -393,7 +612,7 @@ window.onclick = function(event) {
 </script>
 
 
-  </body>
+</body>
 </html>
 
 	    

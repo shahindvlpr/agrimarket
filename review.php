@@ -77,6 +77,8 @@
                                     </div>
                                     <div class="6u 12u$(large)">
                                         <a href="buyNow.php?pid=<?= $pid; ?>" class="btn btn-primary" style="text-decoration: none;">Buy Now</a>
+
+										<!-- <button class="button fit" onclick="document.getElementById('id02').style.display='block'" style="width:auto">Buy Now</button> -->
                                     </div>
                                 </div>
                             </center>

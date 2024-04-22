@@ -40,7 +40,7 @@
 		?>
 
 		<!--One -->
-			<section id="main" class="wrapper style1 align-center" >
+			<section id="main" class="wrapper style1 align-center change_bg" >
 				<div class="container">
 						<h2>Welcome to digital market</h2>
 

@@ -7,8 +7,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
 	$mobile = dataFilter($_POST['mobile']);
 	$user = dataFilter($_POST['uname']);
 	$email = dataFilter($_POST['email']);
-	$pass =	dataFilter(password_hash($_POST['pass'], PASSWORD_BCRYPT));
-	$hash = dataFilter( md5( rand(0,1000) ) );
+    $pass = dataFilter($_POST['pass']);
+	// $pass =	dataFilter(password_hash($_POST['pass'], PASSWORD_BCRYPT));
+	// $hash = dataFilter( md5( rand(0,1000) ) );
 	$category = dataFilter($_POST['category']);
     $addr = dataFilter($_POST['addr']);
 
@@ -18,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST")
     $_SESSION['Username'] = $user;
     $_SESSION['Mobile'] = $mobile;
     $_SESSION['Category'] = $category;
-    $_SESSION['Hash'] = $hash;
+    // $_SESSION['Hash'] = $hash;
     $_SESSION['Addr'] = $addr;
     $_SESSION['Rating'] = 0;
 }
