@@ -6,14 +6,31 @@
 
 <html lang="en">
     <head>
-        <title>Profile: <?php echo $_SESSION['Username']; ?></title>
+    <title>Profile: <?php echo $_SESSION['Username']; ?></title>
         <meta charset="utf-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link href="bootstrap\css\bootstrap.min.css" rel="stylesheet">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
         <script src="bootstrap\js\bootstrap.min.js"></script>
-        <link rel="stylesheet" href="assets/css/main.css" />
+        <meta name="description" content="" />
+		<meta name="keywords" content="" />
+		<!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]-->
+		<link rel="stylesheet" href="login.css"/>
+		<script src="js/jquery.min.js"></script>
+		<script src="js/skel.min.js"></script>
+		<script src="js/skel-layers.min.js"></script>
+		<script src="js/init.js"></script>
+		<link rel="stylesheet" href="css/skel.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
+    
+<style>
+.row.uniform {
+    color: #000;
+}
+</style>
+
     </head>
 
     <body class="subpage">
@@ -78,14 +95,15 @@
                         </div>
                         <div class="3u 12u$(small)">
                             <input type="radio" id="btech" name="edu" value="B.TECH">
-                            <label for="btech">B.TECH</label>
+                            <label for="btech">B.Sc</label>
                         </div>
                          <div class="3u 12u$(small)">
                             <input type="radio" id="mtech" name="edu" value="M.TECH">
-                            <label for="mtech">M.TECH</label>
-                        </div>s
+                            <label for="mtech">M.Sc</label>
+                        </div>
+                        
                         <p>
-                            <b>Choose Year : </b>
+                            <b>Choose Year : 
                         </p>
                         <div class="2u 12u$(small)">
                             <input type="radio" id="1" name="year" value="1" checked>

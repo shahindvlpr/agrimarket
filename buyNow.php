@@ -32,7 +32,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>GoldCrops: Transaction</title>
+	<title>AgriMarket: Transaction</title>
 	<meta lang="eng">
 	<meta charset="UTF-8">
 		<title>GoldCrops</title>

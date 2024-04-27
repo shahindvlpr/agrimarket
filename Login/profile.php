@@ -37,12 +37,52 @@
 		<link rel="stylesheet" href="../css/skel.css" />
 		<link rel="stylesheet" href="../css/style.css" />
 		<link rel="stylesheet" href="../css/style-xlarge.css" />
+    
+    
+<style>
+section.\34 u.\31 2u\$\(small\).width_100\%.profilein {
+    position: absolute;
+    width: 6%;
+    right: 20px;
+    top: 100px;
+    /* background: #000;
+    opacity: .3; */
+    border-radius: 5px;
+    z-index: 99;
+}
+/* section.\34 u.\31 2u\$\(small\).width_100\%.profilein {
+    width: 6%;
+    background: transparent;
+    opacity: .5;
+    border-radius: 5px;
+    float: right;
+    position: absolute;
+    top: 94px;
+    right: 30px;
+    z-index: 999;
+    color: #fff;
+    font-weight: 800;
+} */
+section.\34 u.\31 2u\$\(small\).width_100\%.profilein p {
+    padding-bottom: 0;
+    margin-bottom: 0;
+}
+section.\34 u.\31 2u\$\(small\).width_100\%.profilein img {
+    overflow: hidden;
+    width: 100%;
+}
+</style>
+
     </head>
 
     <body>
         <?php
             require 'menu.php';
         ?>
+        <section class="4u 12u$(small) width_100% profilein">
+            <a href="../profileView.php"><img src="../images/profile.png"></a>
+            <p>My Profile</p>
+        </section>
 
         <section id="banner" class="wrapper">
             <div class="container">
@@ -93,7 +133,7 @@
                     </div>
 
                 <?php endif; ?>
-
+        </section>
 
     </body>
 </html>

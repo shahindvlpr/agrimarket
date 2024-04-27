@@ -25,6 +25,15 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-xlarge.css" />
 		<script src="https://cdn.ckeditor.com/4.8.0/full/ckeditor.js"></script>
+	
+<style>
+blockquote {
+    border-bottom: medium double rgba(144, 144, 144, 0.25);
+    color: #000;
+}
+</style>
+	
+	
 	</head>
 	<body class="subpage">
 

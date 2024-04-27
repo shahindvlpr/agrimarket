@@ -118,6 +118,13 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-xlarge.css" />
 		<link rel="stylesheet" href="Blog/commentBox.css" />
+	
+<style>
+blockquote {
+    border-bottom: medium double rgba(144, 144, 144, 0.25);
+    color: #000;
+}
+</style>
 	</head>
 	<body class="subpage">
 

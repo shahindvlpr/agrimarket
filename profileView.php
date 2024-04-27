@@ -31,6 +31,16 @@
 		<link rel="stylesheet" href="css/style.css" />
 		<link rel="stylesheet" href="css/style-xlarge.css" />
 
+<style>
+section#one {
+    background-image: url(images/b6.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: #fff;
+}
+</style>
+   
     </head>
 
 
@@ -44,22 +54,22 @@
             <div class="inner">
                 <div class="box">
                 <header>
-                    <center>
-                    <span><img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="image-circle" class="img-responsive" height="200%"></span>
+                    <!-- <center>
+                    <span><img src="<?php echo '../images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="image-circle" class="img-responsive" height="200%"></span>
                     <br>
                     <h2><?php echo $_SESSION['Name'];?></h2>
                     <h4 style="color: black;"><?php echo $_SESSION['Username'];?></h4>
                     <br>
-                </center>
+                </center> -->
                 </header>
                     <div class="row">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-3">
-                            <b><font size="+1" color="black">RATINGS : </font></b>
+                            <b><font size="+1" color="#fff">RATINGS : </font></b>
                             <font size="+1"><?php echo $_SESSION['Rating'];?></font>
                         </div>
                         <div class="col-sm-3">
-                            <b><font size="+1" color="black">Email ID : </font></b>
+                            <b><font size="+1" color="#fff">Email ID : </font></b>
                             <font size="+1"><?php echo $_SESSION['Email'];?></font>
                         </div>
                         <div class="col-sm-3"></div>
@@ -68,11 +78,11 @@
                     <div class="row">
                         <div class="col-sm-3"></div>
                         <div class="col-sm-3">
-                            <b><font size="+1" color="black">Mobile No : </font></b>
+                            <b><font size="+1" color="#fff">Mobile No : </font></b>
                             <font size="+1"><?php echo $_SESSION['Mobile'];?></font>
                         </div>
                         <div class="col-sm-3">
-                            <b><font size="+1" color="black">ADDRESS : </font></b>
+                            <b><font size="+1" color="#fff">ADDRESS : </font></b>
                             <font size="+1"><?php echo $_SESSION['Addr'];?></font>
                         </div>
                         <div class="col-sm-3"></div>

@@ -87,8 +87,6 @@ section.background_img {
     position: relative;
     border-top: 11px solid #000000;
 }
-
-
 </style>
 <style>
 /* farmer section */
@@ -123,6 +121,7 @@ section.background_img {
     max-width: 590px;
     margin-bottom: 28px;
     font-family: verdana;
+	text-align: justify;
 }
 .learn-more-btn {
     padding: 10px 20px;
@@ -137,6 +136,13 @@ section.background_img {
     font-weight: 400;
     line-height: 40px;
     transition: transform 0.3s ease;
+}
+a.learn-more-btn:hover {
+    text-decoration: none;
+    background: #000;
+    color: #fff;
+    transition: 1s all;
+    opacity: .5;
 }
 .funders-section .funders-section-img-right {
     display: block;
@@ -186,14 +192,14 @@ section.background_img {
     background-size: cover;
     z-index: -99;
     position: relative;
-    border-top: 11px solid #000000;
+    border-top: 0;
 }
 section#main.change_bg {
 	background-image: url(images/b6.png);
 	background-size: cover;
 	background-position: center;
 	background-repeat: no-repeat;
-} 
+} */
 .wrapper .style1 .align-center .change_bg,
 .wrapper.style1 {
 	background-color: blue;
@@ -202,8 +208,15 @@ section#main.change_bg {
 	background-position: center;
 	background-repeat: no-repeat;
 }
+.sub-container h3 {
+    color: #000 !important;
+    float: left;
+    font-size: 35px;
+    margin-bottom: 0;
+    font-weight: 500;
+}
 </style>
-	</head>
+</head>
 
 	<?php
 		require 'menu.php';
@@ -211,12 +224,12 @@ section#main.change_bg {
 <!-- image-filtering-section-start -->
 
 <?php
- 	// session_start();
-	if(!isset($_SESSION['logged_in']) OR $_SESSION['logged_in'] == 0)
-	{
-		$_SESSION['message'] = "You need to first login to access this page !!!";
-		header("Location: Login/error.php");
-	}
+ 	// // session_start();
+	// if(!isset($_SESSION['logged_in']) OR $_SESSION['logged_in'] == 0)
+	// {
+	// 	$_SESSION['message'] = "You need to first login to access this page !!!";
+	// 	header("Location: Login/error.php");
+	// }
 
  ?>
 <section class="product_section">
@@ -254,6 +267,17 @@ section#main.change_bg {
 				<h2>AgriMarket</h2>
 				<p>Your Product Our Market</p>
 				<br><br>
+				<section id="banner" class="wrapper banner-overlay">
+				<div class="banner-container">
+				<div class="container">
+				<h1>
+					<a style="color: #fff; font-size: 50px;" href="#" class="typewrite" data-period="2000" data-type='[ "Hello sir/ma&apos;am", "Welcome To Our E-Commerce Platform"]'>
+					<span class="wrap"></span>
+				</a>
+				</h1>
+				<h2>AgriMarket</h2>
+				<p>Your Product Our Market</p>
+				<br><br>
 				<center>
 					<div class="row uniform unique">
 						<div class="6u 12u$(xsmall)">
@@ -268,7 +292,11 @@ section#main.change_bg {
 				</div>
 				</div>
 
-			</section> -->
+			</section> 
+				</div>
+				</div>
+
+			</section>-->
 
 
 <!-- farmer-section -->

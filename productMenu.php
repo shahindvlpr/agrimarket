@@ -25,6 +25,14 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	
+	
+<style>
+section#main h3 {
+    color: #fff;
+    margin-bottom: 45px;
+}
+</style>
 	</head>
 	<body class>
 
@@ -40,6 +48,7 @@
 		?>
 
 		<!--One -->
+			<div class="product_list_content"  style="background-image: url('images/b6.png');background-size:cover;background-position: center;background-repeat: no-repeat;">
 			<section id="main" class="wrapper style1 align-center change_bg" >
 				<div class="container">
 						<h2>Welcome to digital market</h2>
@@ -56,7 +65,7 @@
 							<div class="col-sm-2">
 								<div class="select-wrapper" style="width: auto" >
 									<select name="type" id="type" required style="background-color:white;color: black;">
-										<option value="all" style="color: black;">List All</option>
+										<option value="all" style="color: black;">See Here...</option>
 										<option value="fruit" style="color: black;">Fruit</option>
 										<option value="vegetable" style="color: black;">Vegetable</option>
 										<option value="grain" style="color: black;">Grains</option>
@@ -112,14 +121,9 @@
 						</div>
 
 						<?php endwhile;	?>
-
-
 					</div>
-
 			</section>
-					</header>
-
 			</section>
-
+			</div>
 	</body>
 </html>
