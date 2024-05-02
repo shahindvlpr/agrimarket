@@ -71,6 +71,10 @@ section.\34 u.\31 2u\$\(small\).width_100\%.profilein img {
     overflow: hidden;
     width: 100%;
 }
+.\36 u.\31 2u\$\(xsmall\).\31 00\% {
+    width: 100%;
+    margin-top: 60px;
+}
 </style>
 
     </head>
@@ -79,10 +83,10 @@ section.\34 u.\31 2u\$\(small\).width_100\%.profilein img {
         <?php
             require 'menu.php';
         ?>
-        <section class="4u 12u$(small) width_100% profilein">
+        <!-- <section class="4u 12u$(small) width_100% profilein">
             <a href="../profileView.php"><img src="../images/profile.png"></a>
             <p>My Profile</p>
-        </section>
+        </section> -->
 
         <section id="banner" class="wrapper">
             <div class="container">
@@ -115,21 +119,21 @@ section.\34 u.\31 2u\$\(small\).width_100\%.profilein img {
 
                  <?php if($_SESSION['Category'] == 1): ?>
                     <div class="row uniform">
-                        <div class="6u 12u$(xsmall)">
+                        <!-- <div class="6u 12u$(xsmall)">
                             <a href=../profileView.php class="button special">My Profile</a>
-                        </div>
+                        </div> -->
                         <div class="6u 12u$(xsmall)">
                             <a href="logout.php" class="button special">LOG OUT</a>
                         </div>
                     </div>
                 <?php else: ?>
                     <div class="row uniform">
-                        <div class="6u 12u$(xsmall)">
+                        <div class="6u 12u$(xsmall) 100%">
                             <a href=../market.php class="button special">Digital Market</a>
                         </div>
-                        <div class="6u 12u$(xsmall)">
+                        <!-- <div class="6u 12u$(xsmall)">
                             <a href="logout.php" class="button special">LOG OUT</a>
-                        </div>
+                        </div> -->
                     </div>
 
                 <?php endif; ?>

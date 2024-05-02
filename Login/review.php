@@ -55,50 +55,12 @@
     border-radius: 8px;
 }
 
-.row.uniform.rowedit {
-    width: 60%;
-}
-.container.contpadding {
-    padding-top: 60px;
-}
-
-.row.row-edit {
-    width: 44%;
-    margin: 0 auto !important;
-}
-
-.col-sm-4.picdesign {
-    margin: 0 auto !important;
-    width: 81%;
-}
-p.p_design {
-    margin: 0;
-    font-size: 50px;
-    margin-bottom: 40px;
-}
-
-.row-text p {
-    text-align: left;
-    font-size: 23px !important;
-    margin-left: 20px;
-    margin-bottom: 15px;
-}
-
-.card-content {
-	/* background: #000; */
-	opacity: .8;
-	border-radius: 10px;
-	padding-top: 30px;
-	padding-bottom: 22px;
-	box-shadow: box-shadow: rgba(6, 24, 44, 0.4) 0px 0px 0px 2px, rgba(6, 24, 44, 0.65) 0px 4px 6px -1px, rgba(255, 255, 255, 0.08) 0px 1px 0px inset;;
-}
-.row.ratingrowedit {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 120px;
-}
-
 </style>
+
+
+
+
+
 
 </head>
 <body>
@@ -121,48 +83,43 @@ p.p_design {
 					?>
 				<section id="main" class="wrapper style1 align-center"style="background-image: url('images/b6.png');background-size:cover;background-position: center;background-repeat: no-repeat;">
 						<div class="container">
-							<div class="row row-edit">
-								<div class="card-content">
+							<div class="row">
 								<div class="col-sm-4 picdesign">
-								<p class="p_design"><?= $row['product']; ?></p>
 									<img class="image fit" src="<?php echo $picDestination.'';?>" alt="" />
-									<div class="row-text">
-										<p>Product Owner : <?= $frow['fname']; ?></p>
-										<p class="price-design">One Pieces : <?= $row['price'].' /-'; ?></p>
-									</div>
 								</div>
 								<!-- Image of farmer-->
 								<div class="col-12 col-sm-6">
-									
-								</div>
+									<p style="font: 50px Times new roman;"><?= $row['product']; ?></p>
+									<p style="font: 30px Times new roman;">Product Owner : <?= $frow['fname']; ?></p>
+									<p style="font: 30px Times new roman;">Price : <?= $row['price'].' /-'; ?></p>
 								</div>
 							</div><br />
-							<!-- <div class="row">
+							<div class="row">
 								<div class="col-12 col-sm-12" style="font: 25px Times new roman;">
 									<?= $row['pinfo']; ?>
 								</div>
-							</div> -->
+							</div>
 						</div>
 
 						<br /><br />
 
 						<div class="12u$">
                             <center>
-                                <div class="row uniform rowedit">
+                                <div class="row uniform">
                                     <div class="6u 12u$(large)">
                                         <a href="myCart.php?flag=1&pid=<?= $pid; ?>" class="btn btn-primary" style="text-decoration: none;"><span class="glyphicon glyphicon-shopping-cart"> AddToCart</a>
                                     </div>
                                     <div class="6u 12u$(large)">
-                                        <!-- <a href="buyNow.php?pid=<?= $pid; ?>" class="btn btn-primary" style="text-decoration: none;">Buy Now</a> -->
+                                        <a href="buyNow.php?pid=<?= $pid; ?>" class="btn btn-primary" style="text-decoration: none;">Buy Now</a>
 										
 										<!-- <a href="login.php>" class="btn btn-primary" style="text-decoration: none;">Registration</a> -->
 										<!-- <button class="button fit" onclick="document.getElementById('id02').style.display='block'" style="width:auto">Buy Now</button> -->
 
 
 										<center>
-											<div class="row uniform unique glyphicon">
+											<div class="row uniform unique">
 												<div class="6u 12u$(xsmall)">
-													<button class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'" style="width:auto">Buy Now</button>
+													<button class="btn btn-primary" onclick="document.getElementById('id02').style.display='block'" style="width:auto">Submit</button>
 												</div>
 											</div>
 										</center>
@@ -172,7 +129,7 @@ p.p_design {
                             </center>
                         </div>
 
-					<div class="container contpadding">
+					<div class="container">
 						<h1>Product Reviews</h1>
 					<div class="row">
 						<?php
@@ -207,7 +164,7 @@ p.p_design {
 			<div class="container">
 				<p style="font: 20px Times new roman; align: left;">Rate this product</p>
 				<form method="POST" action="reviewInput.php?pid=<?= $pid; ?>">
-					<div class="row ratingrowedit">
+					<div class="row">
 						<div class="col-sm-7">
 							<textarea style="background-color:white;color: black;" cols="5" name="comment" placeholder="Write a review"></textarea>
 						</div>
@@ -229,7 +186,7 @@ p.p_design {
 
 <div id="id02" class="modal signuparea">
 
-<form class="modal-content animate" action="Login/signUp.php" method='POST'>
+<form class="modal-content animate" action="signUp.php" method='POST'>
   <div class="imgcontainer">
 	<span onclick="document.getElementById('id02').style.display='none'" class="close" title="Close Modal">&times;</span>
   </div>
@@ -239,7 +196,7 @@ p.p_design {
 <section>
 	<div class="sub-container">
 	<h3 class="signup" style="color: #000 !important;">SignUp</h3>
-	<form method="post" action="Login/signUp.php">
+	<form method="post" action="signUp.php">
 		<center class= "registration-info">
 		<div class="row uniform sign-up">
 			<div class="3u 12u$(xsmall)">

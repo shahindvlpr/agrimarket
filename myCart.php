@@ -21,7 +21,7 @@
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>GoldCrops: My Cart</title>
+		<title>AgriMarket: My Cart</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -40,6 +40,17 @@
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 		<!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	
+	
+<style>
+
+section#main {
+    background-image: url(images/banner_pic.png);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+</style>
 	</head>
 	<body class>
 

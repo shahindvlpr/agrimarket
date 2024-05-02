@@ -43,7 +43,7 @@
             <div class="inner">
                 <div class="box">
                 <header>
-                    <span class="image left"><img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="img-circle" class="img-responsive" height="200px"></span>
+                    <!-- <span class="image left"><img src="<?php echo 'images/profileImages/'.$_SESSION['picName'].'?'.mt_rand(); ?>" class="img-circle" class="img-responsive" height="200px"></span> -->
                     <br>
                     <h2><?php echo $_SESSION['Name'];?></h2>
                     <h4><?php echo $_SESSION['Username'];?></h4>
@@ -57,7 +57,7 @@
                         </div>
                     </form>
                 </header>
-                <form method="post" action="Profile/updateProfile.php">
+                <form method="post" action="../Profile/updateProfile.php">
                     <div class="row uniform">
                         <div class="8u 12u$(xsmall)">
                             <input type="text" name="name" id="name" value="<?php echo $_SESSION['Name'];?>" placeholder="Full Name" required />

@@ -25,7 +25,7 @@
 		</noscript>
 		<link rel="stylesheet" href="indexfooter.css" />
 
-<style
+<style>
 	.copyRight-area {
 		margin-top: 50px;
 		background: #000;

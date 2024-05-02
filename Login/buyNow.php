@@ -1,33 +1,3 @@
-<?php
-	session_start();
-	require 'db.php';
-    $pid = $_GET['pid'];
-    if($_SERVER['REQUEST_METHOD'] == "POST")
-    {
-        $name = $_POST['name'];
-        $city = $_POST['city'];
-        $mobile = $_POST['mobile'];
-        $email = $_POST['email'];
-        $pincode = $_POST['pincode'];
-        $addr = $_POST['addr'];
-        $bid = $_SESSION['id'];
-
-        $sql = "INSERT INTO transaction (bid, pid, name, city, mobile, email, pincode, addr)
-                VALUES ('$bid', '$pid', '$name', '$city', '$mobile', '$email', '$pincode', '$addr')";
-        $result = mysqli_query($conn, $sql);
-        if($result)
-        {
-            $_SESSION['message'] = "Order Succesfully placed! <br /> Thanks for shopping with us!!!";
-            header('Location: Login/success.php');
-        }
-        else {
-            echo $result->mysqli_error();
-            //$_SESSION['message'] = "Sorry!<br />Order was not placed";
-            //header('Location: Login/error.php');
-        }
-    }
-?>
-
 
 <!DOCTYPE html>
 <html>
@@ -35,7 +5,7 @@
 	<title>AgriMarket: Transaction</title>
 	<meta lang="eng">
 	<meta charset="UTF-8">
-		<title>GoldCrops</title>
+		<title>AgriMarket</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -53,6 +23,8 @@
 			<link rel="stylesheet" href="css/style.css" />
 			<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
+
+
 </head>
 <body>
 
@@ -60,11 +32,41 @@
         require 'menu.php';
     ?>
 
+<?php
+	// session_start();
+	require '../db.php';
+    // $pid = $_GET['pid'];
+    if($_SERVER['REQUEST_METHOD'] == "POST")
+    {
+        $name = $_POST['name'];
+        $city = $_POST['city'];
+        $mobile = $_POST['mobile'];
+        $email = $_POST['email'];
+        $pincode = $_POST['pincode'];
+        $addr = $_POST['addr'];
+        $bid = $_SESSION['id'];
+
+        $sql = "INSERT INTO transaction (bid, pid, name, city, mobile, email, pincode, addr)
+                VALUES ('$bid', '$pid', '$name', '$city', '$mobile', '$email', '$pincode', '$addr')";
+        $result = mysqli_query($conn, $sql);
+        if($result)
+        {
+            $_SESSION['message'] = "Order Succesfully placed! <br /> Thanks for shopping with us!!!";
+            header('Location: success.php');
+        }
+        else {
+            echo $result->mysqli_error();
+            //$_SESSION['message'] = "Sorry!<br />Order was not placed";
+            //header('Location: Login/error.php');
+        }
+    }
+?>
+
 
     <section id="main" class="wrapper" >
         <div class="container">
         <center>
-            <h2>Transaction Details</h2>
+                <h2>Transaction Details</h2>
         </center>
         <section id="two" class="wrapper style2 align-center">
         <div class="container">

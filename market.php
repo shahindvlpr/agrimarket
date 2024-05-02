@@ -1,18 +1,28 @@
 <?php
- 	session_start();
-	if(!isset($_SESSION['logged_in']) OR $_SESSION['logged_in'] == 0)
-	{
-		$_SESSION['message'] = "You need to first login to access this page !!!";
-		header("Location: Login/error.php");
+	session_start();
+	require 'db.php';
+	
+	function dataFilter($data) {
+		$data = trim($data);
+		$data = stripslashes($data);
+		$data = htmlspecialchars($data);
+		return $data;
 	}
 
- ?>
+	if(isset($_GET['search']) && !empty($_GET['search'])) {
+		$search = dataFilter($_GET['search']);
+		$sql = "SELECT * FROM fproduct WHERE product LIKE '%$search%'";
+	} else {
+		$sql = "SELECT * FROM fproduct WHERE 1";
+	}
 
+	$result = mysqli_query($conn, $sql);
+?>
 <!DOCTYPE html>
 <html lang="en">
 	<head>
 		<meta charset="UTF-8">
-		<title>GoldCrops</title>
+		<title>AgriMarket</title>
 		<meta http-equiv="content-type" content="text/html; charset=utf-8" />
 		<meta name="description" content="" />
 		<meta name="keywords" content="" />
@@ -60,16 +70,47 @@ section.product_section.another-product {
 	
 	</head>
 	<?php require 'menu.php'; ?>
+	<div class="product_list_content" style="background-image: url('images/b6.png');background-size:cover;background-position: center;background-repeat: no-repeat;">
+	<section id="main" class="wrapper style1 align-center change_bg">
+		<div class="container">
+			<h2>Welcome to digital market</h2>
+
+			<form method="GET" action="productMenu.php">
+				<input type="text" name="search" placeholder="Search products...">
+				<input type="submit" value="Search">
+			</form>
+
+			<section id="two" class="wrapper style2 align-center">
+				<div class="container">
+					<div class="row">
+						<?php while($row = $result->fetch_array()): ?>
+							<div class="col-md-4">
+								<section>
+									<strong><h2 class="title" style="color:black; "><?php echo $row['product'];?></h2></strong>
+									<a href="review.php?pid=<?php echo $row['pid'];?>"><img class="image fit" src="images/productImages/<?php echo $row['pimage'];?>" height="220px;" /></a>
+									<div style="align: left">
+										<?php echo "Type : ".$row['pcat'];?>
+										<?php echo "Price : ".$row['price']." /-";?>
+									</div>
+								</section>
+							</div>
+						<?php endwhile; ?>
+					</div>
+				</div>
+			</section>
+		</div>
+	</section>
+</div>
 	<body>
 
-<section class="product_section another-product">
+<!-- <section class="product_section another-product">
 <div class="container text-center">
   <div class="row align-center">
 		<a href="productMenu.php?n=1" name="catSearch"><img src="images/search_product.png"></a><br><br>
 		<p class="p_text">Search according to your needs</p>
   </div>
 </div>
-</section>
+</section> -->
 
 		<!-- One -->
 			<!-- <section id="one" class="wrapper style1 align-center" style="height: 600px">

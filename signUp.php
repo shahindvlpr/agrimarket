@@ -95,7 +95,7 @@ if($category == 1)
 
             //$check = mail( $to, $subject, $message_body );
 
-            header("location: profile.php>");
+            header("location: ../buyNow.php?pid=<?= $pid; ?>");
     	}
     	else
     	{
